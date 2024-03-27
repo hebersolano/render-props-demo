@@ -1,7 +1,12 @@
 import { CompanyItem } from "./CompanyItem";
+import Counter from "./Counter";
+import withToggles from "./HOC";
 import { List } from "./List";
 import { ProductItem } from "./ProductItem";
+import { ProductList } from "./ProductList";
 import { companies, products } from "./data-api";
+
+const ProductListWithToggles = withToggles(ProductList);
 
 export default function App() {
   return (
@@ -17,8 +22,33 @@ export default function App() {
         <List
           title="Companies"
           items={companies}
-          render={(company) => <CompanyItem key={company.name} company={company} />}
+          render={(company) => (
+            <CompanyItem key={company.name} company={company} defaultVisibility={false} />
+          )}
         />
+      </div>
+      <div className="col-2">
+        <ProductListWithToggles title="Test title" items={products} />
+      </div>
+
+      <div>
+        <h1>Compound Component Pattern</h1>
+        <Counter
+          iconIncrease="+"
+          iconDecrease="-"
+          label="My NOT so flexible counter"
+          hideLabel={false}
+          hideIncrease={false}
+          hideDecrease={false}
+          positionCount="top"
+        />
+
+        <Counter>
+          <Counter.Label>My super flexible counter</Counter.Label>
+          <Counter.Increase icon="+" />
+          <Counter.Count />
+          <Counter.Decrease icon="-" />
+        </Counter>
       </div>
     </div>
   );

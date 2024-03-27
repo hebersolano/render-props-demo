@@ -15,10 +15,8 @@ export default function withToggles(WrappedComponent) {
     return (
       <div className="list-container">
         <div className="heading">
-          <h2>{props.title}</h2>
-          <button onClick={toggleOpen}>
-            {isOpen ? <span>&or;</span> : <span>&and;</span>}
-          </button>
+          <h2>{props?.title}</h2>
+          <button onClick={toggleOpen}>{isOpen ? <span>&or;</span> : <span>&and;</span>}</button>
         </div>
         {isOpen && <WrappedComponent {...props} items={displayItems} />}
 
