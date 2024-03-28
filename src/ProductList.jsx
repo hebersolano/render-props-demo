@@ -4,6 +4,7 @@ import { ProductItem } from "./ProductItem";
 export function ProductList({ title, items }) {
   return (
     <ul className="list">
+      <h1>{title}</h1>
       {items.map((product) => (
         <ProductItem key={product.productName} product={product} />
       ))}

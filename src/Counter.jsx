@@ -1,3 +1,4 @@
+// COMPOUND COMPONENT PATTER
 import { createContext, useContext, useState } from "react";
 
 // 1. create context
@@ -18,7 +19,6 @@ function Counter({ children }) {
 }
 
 // 3. create child component to help implement the common task
-
 function Count() {
   const { count } = useContext(CounterContext);
   return <span>{count}</span>;

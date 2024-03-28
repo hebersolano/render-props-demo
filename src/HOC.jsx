@@ -1,3 +1,4 @@
+// HIGHER ORDER COMPONENTS
 import { useState } from "react";
 
 export default function withToggles(WrappedComponent) {

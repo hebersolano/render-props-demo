@@ -1,8 +1,9 @@
-# React + Vite
+# React Advance Patterns
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React project from the [Ultimate React Course](https://github.com/jonasschmedtmann/ultimate-react-course) by Jonas Schmedtmann.
 
-Currently, two official plugins are available:
+## Knowledge applied:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Renders Props Patter**: a technique for sharing code between React components using a prop whose value is a function. A component with a render prop takes a function that returns a React element and calls it instead of implementing its own render logic.
+- **Higher-Order Components (HOC)**: an advanced technique in React for reusing component logic. Concretely, a higher-order component _is a function that takes a component and returns a new component_.
+- **Compound Component Patter**: a design pattern in React to have a component that renders one or more child components that work together to form a cohesive user interface.

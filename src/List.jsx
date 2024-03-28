@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { ProductItem } from "./ProductItem";
 
 export function List({ title, items, render }) {
   const [isOpen, setIsOpen] = useState(true);

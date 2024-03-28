@@ -27,13 +27,14 @@ export default function App() {
           )}
         />
       </div>
-      <div className="col-2">
+      <div className="">
+        <h1>Higher-Order Component</h1>
         <ProductListWithToggles title="Test title" items={products} />
       </div>
 
       <div>
         <h1>Compound Component Pattern</h1>
-        <Counter
+        {/* <Counter
           iconIncrease="+"
           iconDecrease="-"
           label="My NOT so flexible counter"
@@ -41,7 +42,7 @@ export default function App() {
           hideIncrease={false}
           hideDecrease={false}
           positionCount="top"
-        />
+        /> */}
 
         <Counter>
           <Counter.Label>My super flexible counter</Counter.Label>
